@@ -332,7 +332,7 @@ if __name__ == '__main__':
     path2 = 'val/'
     excel_file = 'G:/shuju_at/Allm00ft_score.xlsx'
 
-    train_data = load_data(args, root_path, path1, excel_file) #数据的导入函数自行根据数据集进行创建
+    train_data = load_data(args, root_path, path1, excel_file) #数据的导入,请自行根据数据集进行创建
     val_data = load_data(args, root_path, path2, excel_file)
     #train_data = load_data(args, root_path, path1, path2, excel_file)
     #train_data = load_data(args, args.train_root_path, args.AD_dir, args.CN_dir)
