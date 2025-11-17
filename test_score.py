@@ -192,7 +192,7 @@ if __name__ == '__main__':
 	since = time.time()
 
 
-	loaded_model = ResNet_3D # 假设ResNet_3D是你的模型类
+	loaded_model = ResNet_3D 
 
 	#loaded_model.load_state_dict(torch.load('model/3DSEResNet10_epoch_68_an.pt'))
 	#model_path = f'model/3DSEResNet10_epoch_{epoch}_an.pt'
@@ -210,8 +210,8 @@ if __name__ == '__main__':
 	test_rmse_mmse_all.append(rmse_mmse)
 
 	cuda_tensor2 = torch.tensor(test_loss_all, device='cuda:0')
-	cpu_tensor2 = cuda_tensor2.cpu()  # 将张量复制到CPU上
-	numpy_test = cpu_tensor2.numpy()  # 然后可以将其转换为NumPy数组
+	cpu_tensor2 = cuda_tensor2.cpu()  
+	numpy_test = cpu_tensor2.numpy()  
 
 	cuda_tensor3 = torch.tensor(test_cc_adas_all, device='cuda:0')
 	cpu_tensor3 = cuda_tensor3.cpu()
@@ -250,5 +250,6 @@ if __name__ == '__main__':
 	)
 
 	test_process.to_csv('test_process_result.csv')
+
 
 
